@@ -30,6 +30,6 @@ class Mailcowcli::SubCommands::Domains < Mailcowcli::SubCommands
       "active" => options["active"]
     }
 
-    run_request(options: options, api_path: "/edit/domain", json: json, req_method: "post")
+    run_request(api_path: "/add/domain", json: json, req_method: "post")
   end
 end

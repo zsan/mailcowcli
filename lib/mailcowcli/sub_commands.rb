@@ -7,14 +7,17 @@ module Mailcowcli
 
       def run_request api_path:, json:, req_method:, return_response: false
         api_full_path = options["api_server"] + api_base_path + api_path
-        resp = Faraday.post(api_full_path, json.to_json, request_headers)
 
+        resp = Faraday.post(api_full_path, json.to_json, request_headers)
         parsed = JSON.parse(resp.body)
+
         if parsed && parsed[0]["type"].eql?("success")
-          say parsed, :green
+          say resp.body, :green
         else
-          say parsed, :red
+          say resp.body, :red
         end
+
+        parsed
       end
 
       def request_headers

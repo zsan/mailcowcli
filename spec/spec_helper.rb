@@ -1,5 +1,18 @@
 require "bundler/setup"
 require "mailcowcli"
+require 'webmock/rspec'
+require "vcr"
+
+root_path = Pathname.new File.expand_path("..", __dir__)
+
+Dir[root_path.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+
+VCR.configure do |config|
+  config.configure_rspec_metadata!
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.hook_into :webmock
+
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -29,4 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.10.0"
   spec.add_development_dependency "thor", "~> 1.0.1"
   spec.add_development_dependency "faraday", "~> 1.2.0"
+  spec.add_development_dependency "byebug", "~> 11.1.3"
+  spec.add_development_dependency "vcr", "~> 6.0.0"
+  spec.add_development_dependency "webmock", "~> 3.11.0"
 end

@@ -21,7 +21,7 @@ module Mailcowcli
 
       merged = {}
 
-      if File.exist?(filename)
+      if filename && File.exist?(filename)
         defaults = ::YAML.load_file(filename) || {}
         # alternatively, set original_options[:langs] and then return it
         merged = defaults.merge(original_options)

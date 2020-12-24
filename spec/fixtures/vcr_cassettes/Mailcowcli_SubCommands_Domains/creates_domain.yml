@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx/1.14.0 (Ubuntu)
       Date:
-      - Wed, 23 Dec 2020 18:44:20 GMT
+      - Thu, 24 Dec 2020 13:34:30 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -35,7 +35,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Set-Cookie:
-      - PHPSESSID=b887a11766ae11d08ae5a6d8350b56e9; path=/; secure; HttpOnly
+      - PHPSESSID=81b8edf80e3177e81994bfc1df275a3d; path=/; secure; HttpOnly
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -62,5 +62,5 @@ http_interactions:
       encoding: UTF-8
       string: '[{"type":"success","log":["ratelimit","edit","domain",{"rl_value":10,"rl_frame":"s","object":"example.com"}],"msg":["rl_saved","example.com"]},{"type":"success","log":["mailbox","add","domain",{"domain":"example.com","description":"domain
         name","aliases":400,"mailboxes":10,"defquota":3072,"maxquota":10240,"quota":10240,"rl_value":10,"rl_frame":"s","backupmx":0,"relay_all_recipients":0,"lang":"en","active":1},null],"msg":["domain_added","example.com"]}]'
-  recorded_at: Wed, 23 Dec 2020 18:44:20 GMT
+  recorded_at: Thu, 24 Dec 2020 13:34:30 GMT
 recorded_with: VCR 6.0.0

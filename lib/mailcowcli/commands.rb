@@ -8,6 +8,9 @@ module Mailcowcli
     desc "domains", "Domain operations"
     subcommand "domains", SubCommands::Domains
 
+    desc "mailboxes", "Mailbox operations"
+    subcommand "mailboxes", SubCommands::Mailboxes
+
     def self.exit_on_failure?
       # do nothing
       # https://github.com/erikhuda/thor/issues/244

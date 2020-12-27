@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rsync.example.com/api/v1/get/mailbox/foo@example.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Content-Type:
+      - application/json
+      X-Api-Key:
+      - foobarbaz
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Date:
+      - Sun, 27 Dec 2020 15:41:42 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - PHPSESSID=e58b192a17e566859ce242accbb507fd; path=/; secure; HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=15768000;
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Robots-Tag:
+      - none
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "max_new_quota": 10737418240,
+            "username": "foo@example.com",
+            "rl": {
+                "value": "10",
+                "frame": "s"
+            },
+            "rl_scope": "domain",
+            "is_relayed": 0,
+            "name": "foobar",
+            "last_imap_login": "0",
+            "last_smtp_login": "0",
+            "last_pop3_login": "0",
+            "active": 1,
+            "active_int": 1,
+            "domain": "example.com",
+            "local_part": "foo",
+            "quota": 3221225472,
+            "attributes": {
+                "force_pw_update": "1",
+                "tls_enforce_in": "1",
+                "tls_enforce_out": "1",
+                "sogo_access": "1",
+                "imap_access": "1",
+                "pop3_access": "1",
+                "smtp_access": "1",
+                "mailbox_format": "maildir:",
+                "quarantine_notification": "hourly",
+                "quarantine_category": "reject"
+            },
+            "quota_used": 0,
+            "percent_in_use": 0,
+            "messages": 0,
+            "spam_aliases": 0,
+            "pushover_active": 0,
+            "percent_class": "success"
+        }
+  recorded_at: Sun, 27 Dec 2020 15:41:42 GMT
+recorded_with: VCR 6.0.0

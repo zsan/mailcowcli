@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://rsync.example.com/api/v1/delete/alias
+    body:
+      encoding: UTF-8
+      string: '["29"]'
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Content-Type:
+      - application/json
+      X-Api-Key:
+      - 2b4c77DD
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Date:
+      - Sun, 27 Dec 2020 16:10:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - PHPSESSID=e72133cde6486c0bfdd3dc011bd85242; path=/; secure; HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=15768000;
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Robots-Tag:
+      - none
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin
+    body:
+      encoding: UTF-8
+      string: '[{"type":"success","log":["mailbox","delete","alias",{"id":["29"]},null],"msg":["alias_removed","foo@example.com"]}]'
+  recorded_at: Sun, 27 Dec 2020 16:10:23 GMT
+recorded_with: VCR 6.0.0

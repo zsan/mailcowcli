@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rsync.example.com/api/v1/get/alias/28
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Content-Type:
+      - application/json
+      X-Api-Key:
+      - 2b4c77DD
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.14.0 (Ubuntu)
+      Date:
+      - Sun, 27 Dec 2020 16:05:45 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - PHPSESSID=9a18ec3d024def2f845cc0ea04dc5a96; path=/; secure; HttpOnly
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=15768000;
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Robots-Tag:
+      - none
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "in_primary_domain": "",
+            "id": 28,
+            "domain": "example.com",
+            "public_comment": null,
+            "private_comment": null,
+            "goto": "bar@example.com",
+            "address": "foo@example.com",
+            "is_catch_all": 0,
+            "active": 1,
+            "active_int": 1,
+            "sogo_visible": 0,
+            "sogo_visible_int": 0,
+            "created": "2020-12-27 16:03:19",
+            "modified": null
+        }
+  recorded_at: Sun, 27 Dec 2020 16:05:46 GMT
+recorded_with: VCR 6.0.0

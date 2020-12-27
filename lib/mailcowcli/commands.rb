@@ -5,6 +5,9 @@ module Mailcowcli
     class_option :dry_run, type: :boolean, default: false,  desc: "Without running any real request"
     class_option :config, type: :string, default: "#{ENV["HOME"]}/.mailcowcli/config.yaml",  desc: "configuration file"
 
+    desc "aliases", "Alias operations"
+    subcommand "aliases", SubCommands::Aliases
+
     desc "domains", "Domain operations"
     subcommand "domains", SubCommands::Domains
 
